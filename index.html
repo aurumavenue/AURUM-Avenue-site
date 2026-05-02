@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurum Avenue — Люкс из Европы</title>
+<title>Aurum Avenue — Люкс из Европы</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -268,14 +268,14 @@
     background: linear-gradient(to right, transparent, rgba(225,183,78,0.35), rgba(225,183,78,0.35), transparent);
   }
 
-  .step { padding: 0 28px 0 0; position: relative; }
+  .step { padding: 0 32px 0 0; position: relative; word-break: normal; }
   .step-num {
     width: 52px; height: 52px; border: 1px solid rgba(225,183,78,0.35);
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 28px; background: var(--brown);
   }
   .step-num span { font-family: 'Manrope', sans-serif; font-size: 20px; color: var(--gold); }
-  .step h4 { font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 500; color: var(--cream); letter-spacing: 0.01em; margin-bottom: 10px; }
+  .step h4 { font-family: 'Manrope', sans-serif; font-size: 22px; font-weight: 500; color: var(--cream); letter-spacing: 0.01em; margin-bottom: 10px; }
   .step p { font-size: 17px; line-height: 1.7; color: rgba(255,251,233,0.88); letter-spacing: 0.02em; }
 
   /* CHANNELS */
@@ -428,7 +428,7 @@
     .hero-monogram { font-size: 110px; }
     .section, .channels-section, .how-section { padding: 72px 24px; }
     .services-grid, .channels-grid { grid-template-columns: 1fr; }
-    .steps-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .steps-grid { grid-template-columns: 1fr; gap: 36px; }
     .steps-grid::before { display: none; }
     .about-section { grid-template-columns: 1fr; gap: 44px; padding: 72px 24px; }
     .contact-section { padding: 72px 24px; }
@@ -581,7 +581,7 @@
   }
 
   .reviews-sub {
-    font-size: 13px; line-height: 1.9;
+    font-size: 17px; line-height: 1.9;
     color: rgba(255,251,233,0.5);
     max-width: 300px; margin-bottom: 40px;
   }
@@ -803,7 +803,7 @@
   }
 
   .calc-intro {
-    font-size: 13px; line-height: 1.9; color: var(--text-light);
+    font-size: 17px; line-height: 1.9; color: var(--text-light);
     max-width: 560px; margin-bottom: 44px;
   }
 
@@ -815,7 +815,7 @@
   }
   .calc-rule-item {
     display: flex; align-items: center; gap: 8px;
-    font-size: 11px; letter-spacing: 0.04em; color: var(--text-light);
+    font-size: 15px; letter-spacing: 0.04em; color: var(--text-light);
   }
   .calc-rule-dot {
     width: 4px; height: 4px; border-radius: 50%;
@@ -906,7 +906,7 @@
     font-size: 30px; color: var(--wine);
   }
   .calc-result-rub {
-    font-size: 12px; color: var(--text-light);
+    font-size: 16px; color: var(--text-light);
     margin-top: 4px; letter-spacing: 0.05em;
   }
   .calc-rate-note {
@@ -925,7 +925,7 @@
     padding: 22px 28px; text-align: center;
   }
   .calc-outofrange p {
-    font-size: 13px; color: var(--brown); line-height: 1.8;
+    font-size: 17px; color: var(--brown); line-height: 1.8;
   }
   .calc-outofrange a {
     color: var(--wine); text-decoration: underline;
@@ -952,7 +952,7 @@
     <li><a href="#services">Услуги</a></li>
     <li><a href="#how">Как работает</a></li>
     <li><a href="#catalog">Каталог</a></li>
-    <li><a href="#about">О сервисе</a></li>
+    <li><a href="#about">О сервисе</a></li>
             <li><a href="#reviews">Отзывы</a></li>
             <li><a href="#calculator">Расчёт</a></li>
     <li><a href="#contact">Контакты</a></li>
@@ -964,9 +964,9 @@
 <section class="hero">
   <div class="hero-left">
     <p class="hero-eyebrow">Байерский сервис · Европа → Россия</p>
-    <h1 class="hero-title">Европейский<br>люкс —<br><em>без границ</em></h1>
-    <p class="hero-desc">Для девушек, которые ценят стиль, комфорт и своё время. Европейский люкс по умной цене — без хлопот и перелётов.</p>
-    <a href="#services" class="hero-btn">Узнать о сервисе</a>
+    <h1 class="hero-title">Европейский<br>люкс —<br><em>без границ</em></h1>
+    <p class="hero-desc">Для девушек, которые ценят стиль, комфорт и своё время. Европейский люкс по умной цене — без хлопот и перелётов.</p>
+    <a href="#services" class="hero-btn">Узнать о сервисе</a>
   </div>
   <div class="hero-right">
     <div class="hero-right-bg"></div>
@@ -977,7 +977,7 @@
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
         </div>
         <div class="hero-card-label">Aurum Avenue · Buyer Service</div>
-        <h3>Личный байер<br>в Европе</h3>
+        <h3>Личный байер<br>в Европе</h3>
         <p>100% оригинал · Полный комплект · Официальные чеки</p>
         <div class="hero-card-divider"></div>
         <div class="hero-card-stats">
@@ -1021,8 +1021,8 @@
           <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
         </div>
         <div class="service-num">01</div>
-        <h3 class="service-title">Люкс из бутиков</h3>
-        <p class="service-desc">Флагманские бутики Европы — Birkin, Kelly, Chanel, Cartier, Van Cleef. Официальные чеки, полный комплект, 100% оригинал. Любая позиция под заказ.</p>
+        <h3 class="service-title">Люкс из бутиков</h3>
+        <p class="service-desc">Флагманские бутики Европы — Birkin, Kelly, Chanel, Cartier, Van Cleef. Официальные чеки, полный комплект, 100% оригинал. Любая позиция под заказ.</p>
         <div class="service-tags">
           <span class="tag">Hermès</span><span class="tag">Chanel</span>
           <span class="tag">Cartier</span><span class="tag">Van Cleef</span><span class="tag">Dior</span>
@@ -1031,17 +1031,17 @@
       <div class="service-card reveal">
         <div class="service-num">02</div>
         <h3 class="service-title">Смарт-шоппинг</h3>
-        <p class="service-desc">Люкс и премиум в мультибрендовых магазинах Европы. То же качество, умнее цена. Для тех, кто ценит выгоду без компромиссов по стилю.</p>
+        <p class="service-desc">Люкс и премиум в мультибрендовых магазинах Европы. То же качество, умнее цена. Для тех, кто ценит выгоду без компромиссов по стилю.</p>
         <div class="service-tags">
-          <span class="tag">Мультибренды</span><span class="tag">Смарт</span><span class="tag">До −60%</span><span class="tag">Италия</span>
+          <span class="tag">Мультибренды</span><span class="tag">Смарт</span><span class="tag">До −60%</span><span class="tag">Италия</span>
         </div>
       </div>
       <div class="service-card reveal">
         <div class="service-num">03</div>
         <h3 class="service-title">Аутлет</h3>
-        <p class="service-desc">Parndorf Fashion Outlet и другие европейские аутлеты. Люкс и премиум со скидками до 70% — без лишних затрат на перелёт и проживание.</p>
+        <p class="service-desc">Parndorf Fashion Outlet и другие европейские аутлеты. Люкс и премиум со скидками до 70% — без лишних затрат на перелёт и проживание.</p>
         <div class="service-tags">
-          <span class="tag">До −70%</span><span class="tag">Parndorf Fashion Outlet</span>
+          <span class="tag">До −70%</span><span class="tag">Parndorf Fashion Outlet</span>
         </div>
       </div>
     </div>
@@ -1060,22 +1060,22 @@
       <div class="step reveal">
         <div class="step-num"><span>01</span></div>
         <h4>Заявка</h4>
-        <p>Пишете в мессенджер — описываете желаемую позицию или прикладываете референс.</p>
+        <p>Пишете в мессенджер — описываете желаемую позицию или прикладываете референс.</p>
       </div>
       <div class="step reveal">
         <div class="step-num"><span>02</span></div>
-        <h4>Поиск и цена</h4>
-        <p>Нахожу позицию в европейских бутиках, рассчитываю финальную стоимость с доставкой.</p>
+        <h4>Поиск и цена</h4>
+        <p>Нахожу позицию в европейских бутиках, рассчитываю финальную стоимость с доставкой.</p>
       </div>
       <div class="step reveal">
         <div class="step-num"><span>03</span></div>
         <h4>Выкуп</h4>
-        <p>Выкупаю лично. Фотографирую, отправляю отчёт и официальный чек.</p>
+        <p>Выкупаю лично. Фотографирую, отправляю отчёт и официальный чек.</p>
       </div>
       <div class="step reveal">
         <div class="step-num"><span>04</span></div>
-        <h4>Доставка в РФ</h4>
-        <p>Надёжная доставка в Россию. Оригинальная упаковка, полный комплект.</p>
+        <h4>Доставка в РФ</h4>
+        <p>Надёжная доставка в Россию. Оригинальная упаковка, полный комплект.</p>
       </div>
     </div>
   </div>
@@ -1097,22 +1097,22 @@
         <div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
         <div class="channel-label">Канал 01 · Флагман</div>
         <h3 class="channel-title">Люкс & Ювелирные украшения</h3>
-        <p class="channel-desc">Флагманские бутики Европы. Hermès, Chanel, Cartier, Van Cleef, Dior и другие топ-дома.</p>
-        <span class="channel-link">Перейти в канал</span>
+        <p class="channel-desc">Флагманские бутики Европы. Hermès, Chanel, Cartier, Van Cleef, Dior и другие топ-дома.</p>
+        <span class="channel-link">Перейти в канал</span>
       </a>
       <a href="https://t.me/aurumavenuesmart" target="_blank" class="channel-card reveal">
         <div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
         <div class="channel-label">Канал 02 · Смарт</div>
         <h3 class="channel-title">Аутлет & Мультибренды</h3>
-        <p class="channel-desc">Выгодные находки из европейских аутлетов и мультибрендовых магазинов.</p>
-        <span class="channel-link">Перейти в канал</span>
+        <p class="channel-desc">Выгодные находки из европейских аутлетов и мультибрендовых магазинов.</p>
+        <span class="channel-link">Перейти в канал</span>
       </a>
       <a href="https://t.me/buyerkateeu" target="_blank" class="channel-card reveal">
         <div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
         <div class="channel-label">Канал 03 · Премиум</div>
         <h3 class="channel-title">Премиум-бренды</h3>
-        <p class="channel-desc">Лучшие премиум-марки Европы. Качество, стиль и доступность — в одном месте.</p>
-        <span class="channel-link">Перейти в канал</span>
+        <p class="channel-desc">Лучшие премиум-марки Европы. Качество, стиль и доступность — в одном месте.</p>
+        <span class="channel-link">Перейти в канал</span>
       </a>
     </div>
   </div>
@@ -1133,25 +1133,25 @@
             <div class="portrait-name">Катерина Макарени</div>
             <div class="portrait-role">Основатель · Личный байер</div>
           </div>
-          <div class="portrait-since">с 2023</div>
+          <div class="portrait-since">с 2023</div>
         </div>
       </div>
     </div>
     <div class="about-right">
       <span class="section-roman">IV</span>
       <div class="gold-rule"></div>
-      <p class="section-label reveal">О сервисе</p>
+      <p class="section-label reveal">О сервисе</p>
       <a href="#" class="nav-logo reveal" style="margin-bottom:48px;pointer-events:none;"><span class="logo-line1" style="font-size:48px;letter-spacing:0.32em;display:block;">AURUM</span><span class="logo-line2" style="font-size:48px;letter-spacing:0.32em;display:block;margin-left:-0.38em;">AVENUE</span></a>
-      <p class="reveal">Меня зовут Катерина. Я основала <strong>Aurum Avenue</strong> — байерский сервис по выкупу оригинальных люкс-брендов в Европе с доставкой в Россию.</p>
-      <p class="reveal">Живу между Латвией и Петербургом. С 2023 года помогаю клиентам разгружать их Wish List. Мой подход основан на <strong>внимании к деталям, доверии и уютной атмосфере общения.</strong></p>
+      <p class="reveal">Меня зовут Катерина. Я основала <strong>Aurum Avenue</strong> — байерский сервис по выкупу оригинальных люкс-брендов в Европе с доставкой в Россию.</p>
+      <p class="reveal">Живу между Латвией и Петербургом. С 2023 года помогаю клиентам разгружать их Wish List. Мой подход основан на <strong>внимании к деталям, доверии и уютной атмосфере общения.</strong></p>
       <div class="about-tagline reveal">
-        Пока вы живёте свою счастливую жизнь, о вашем шоппинге заботится сервис Aurum Avenue.
+        Пока вы живёте свою счастливую жизнь, о вашем шоппинге заботится сервис Aurum Avenue.
       </div>
       <div class="about-values reveal">
         <div class="value-item"><div class="value-dot"></div><span class="value-text">100% оригинал — официальные бутики, чеки, полный комплект</span></div>
         <div class="value-item"><div class="value-dot"></div><span class="value-text">Личный подход — каждый клиент получает индивидуальный сервис</span></div>
-        <div class="value-item"><div class="value-dot"></div><span class="value-text">Прозрачность — фото, чек и отчёт на каждом этапе</span></div>
-        <div class="value-item"><div class="value-dot"></div><span class="value-text">Доставка по России — надёжно, в оригинальной упаковке</span></div>
+        <div class="value-item"><div class="value-dot"></div><span class="value-text">Прозрачность — фото, чек и отчёт на каждом этапе</span></div>
+        <div class="value-item"><div class="value-dot"></div><span class="value-text">Доставка по России — надёжно, в оригинальной упаковке</span></div>
       </div>
     </div>
   </div>
@@ -1163,14 +1163,14 @@
   <div class="section">
     <span class="section-roman">VI</span>
     <h2 class="section-title reveal">Примерный<br><em>расчёт</em></h2>
-    <p class="calc-intro reveal">Введите стоимость товара — я покажу ориентировочную итоговую сумму. Точная цена зависит от условий выкупа, доставки и курса на день оплаты.</p>
+    <p class="calc-intro reveal">Введите стоимость товара — я покажу ориентировочную итоговую сумму. Точная цена зависит от условий выкупа, доставки и курса на день оплаты.</p>
 
     <div class="calc-wrapper reveal">
       <!-- Rules hint -->
       <div class="calc-rules">
         <div class="calc-rule-item">
           <span class="calc-rule-dot"></span>
-          <span>До 500€ — цена по запросу</span>
+          <span>До 500€ — цена по запросу</span>
         </div>
         <div class="calc-rule-item">
           <span class="calc-rule-dot"></span>
@@ -1178,11 +1178,11 @@
         </div>
         <div class="calc-rule-item">
           <span class="calc-rule-dot"></span>
-          <span>Свыше 10 000€ — цена по запросу</span>
+          <span>Свыше 10 000€ — цена по запросу</span>
         </div>
         <div class="calc-rule-item">
           <span class="calc-rule-dot"></span>
-          <span>Доставка: ~100€ (ювелирка от 2000€ — 5% от стоимости)</span>
+          <span>Доставка: ~100€ (ювелирка от 2000€ — 5% от стоимости)</span>
         </div>
       </div>
 
@@ -1233,13 +1233,13 @@
         </div>
         <div class="calc-rate-note" id="calcRateNote"></div>
         <div class="calc-disclaimer">
-          ⚠ Расчёт ориентировочный. Точная сумма зависит от условий выкупа, тарифов доставки и курса на день оплаты.
+          ⚠ Расчёт ориентировочный. Точная сумма зависит от условий выкупа, тарифов доставки и курса на день оплаты.
         </div>
       </div>
 
       <!-- Out of range message -->
       <div class="calc-outofrange" id="calcOutOfRange" style="display:none;">
-        <p>Для уточнения стоимости <a href="#contact">напишите мне</a> — рассчитаю персонально.</p>
+        <p>Для уточнения стоимости <a href="#contact">напишите мне</a> — рассчитаю персонально.</p>
       </div>
     </div>
   </div>
@@ -1253,7 +1253,7 @@
     <div class="gold-rule"></div>
     <p class="section-label reveal" style="color:var(--gold)">Отзывы</p>
     <h2 class="section-title reveal" style="color:var(--cream)">Клиенты<br><em>говорят</em></h2>
-    <p class="reviews-sub reveal">Реальные переписки — без купюр и постановки. Просто счастливые покупки.</p>
+    <p class="reviews-sub reveal">Реальные переписки — без купюр и постановки. Просто счастливые покупки.</p>
     <div class="reviews-counter reveal">
       <span class="reviews-counter-num" id="reviewsCounterNum">1</span>
       <span class="reviews-counter-sep">/</span>
@@ -1267,7 +1267,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
       </button>
     </div>
-    <p class="reviews-hint reveal">Нажимайте на карточки или используйте стрелки</p>
+    <p class="reviews-hint reveal">Нажимайте на карточки или используйте стрелки</p>
   </div>
 
   <div class="reviews-right">
@@ -1289,7 +1289,7 @@
       <div class="gold-rule" style="opacity:0.4"></div>
       <p class="section-label reveal">Контакты</p>
       <h2 class="section-title reveal">Напишите<br><em>мне</em></h2>
-      <p class="contact-subtitle reveal">Расскажите что ищете — я подберу лучший вариант. Отвечаю быстро, консультирую без обязательств.</p>
+      <p class="contact-subtitle reveal">Расскажите что ищете — я подберу лучший вариант. Отвечаю быстро, консультирую без обязательств.</p>
     </div>
     <div class="contact-right">
       <div class="contact-items">
@@ -1312,7 +1312,7 @@
               <path d="M7 12l3.5 3.5L17 8.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <div><div class="contact-item-type">MAX</div><div class="contact-item-label">Написать в MAX</div></div>
+          <div><div class="contact-item-type">MAX</div><div class="contact-item-label">Написать в MAX</div></div>
         </a>
         <a href="mailto:baltikbuyerk@gmail.com" class="contact-item reveal">
           <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(225,183,78,0.8)" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
@@ -1460,11 +1460,11 @@ window.addEventListener('scroll', () => {
       initial: 'А',
       badge: '❤️ Счастлива',
       messages: [
-        { text: 'Катя, добрый день! Хотела узнать про Dior сумочку из вашего каталога 🙏', from: 'in' },
-        { text: 'Привет! Да, можем выкупить, как раз летим в Париж 10 сентября ✈️', from: 'out' },
-        { text: 'Ура! И сколько выйдет итого?', from: 'in' },
-        { text: 'Цена бутика 2340€ + доставка — считаю, напишу через минуту 😊', from: 'out' },
-        { text: 'Катя вы лучшее что случилось с моим гардеробом 😭❤️', from: 'in', gold: true },
+        { text: 'Катя, добрый день! Хотела узнать про Dior сумочку из вашего каталога 🙏', from: 'in' },
+        { text: 'Привет! Да, можем выкупить, как раз летим в Париж 10 сентября ✈️', from: 'out' },
+        { text: 'Ура! И сколько выйдет итого?', from: 'in' },
+        { text: 'Цена бутика 2340€ + доставка — считаю, напишу через минуту 😊', from: 'out' },
+        { text: 'Катя вы лучшее что случилось с моим гардеробом 😭❤️', from: 'in', gold: true },
       ]
     },
     {
@@ -1474,8 +1474,8 @@ window.addEventListener('scroll', () => {
       messages: [
         { text: 'Получила посылку!!! Всё идеально упаковано, чек вложен', from: 'in' },
         { text: 'Как она вам? 😍', from: 'out' },
-        { text: 'Я в слезах от счастья. Это моя мечта из wishlist-а 2 года', from: 'in' },
-        { text: 'Вот за это и люблю свою работу 💛 носите на здоровье!', from: 'out', gold: true },
+        { text: 'Я в слезах от счастья. Это моя мечта из wishlist-а 2 года', from: 'in' },
+        { text: 'Вот за это и люблю свою работу 💛 носите на здоровье!', from: 'out', gold: true },
         { text: 'Уже заказываю следующую 😅 спасибо огромное!', from: 'in' },
       ]
     },
@@ -1484,11 +1484,11 @@ window.addEventListener('scroll', () => {
       initial: 'Д',
       badge: '🎁 Подарок',
       messages: [
-        { text: 'Здравствуйте, хочу сделать подарок жене. Она мечтает о кольце Bvlgari', from: 'in' },
-        { text: 'Отличный выбор! Есть в наличии, могу выкупить на этой неделе', from: 'out' },
-        { text: 'А сертификат подлинности будет?', from: 'in' },
+        { text: 'Здравствуйте, хочу сделать подарок жене. Она мечтает о кольце Bvlgari', from: 'in' },
+        { text: 'Отличный выбор! Есть в наличии, могу выкупить на этой неделе', from: 'out' },
+        { text: 'А сертификат подлинности будет?', from: 'in' },
         { text: 'Конечно, всё официально — бутик, чек, коробка, пакет 🛍️', from: 'out' },
-        { text: 'Супруга в восторге! Сказала — лучший подарок за 10 лет 🥂', from: 'in', gold: true },
+        { text: 'Супруга в восторге! Сказала — лучший подарок за 10 лет 🥂', from: 'in', gold: true },
       ]
     },
     {
@@ -1498,9 +1498,9 @@ window.addEventListener('scroll', () => {
       messages: [
         { text: 'Катя, прилетела сумка! Такая красивая вживую...', from: 'in' },
         { text: 'Покажите как доехала! 📸', from: 'out' },
-        { text: 'Вот, смотрите — коробка целая, всё как из бутика', from: 'in' },
-        { text: 'Отлично! Это она и есть — Bottega Veneta из Милана 🤍', from: 'out', gold: true },
-        { text: 'Рекомендую всем подругам ваш сервис! Честно и удобно', from: 'in' },
+        { text: 'Вот, смотрите — коробка целая, всё как из бутика', from: 'in' },
+        { text: 'Отлично! Это она и есть — Bottega Veneta из Милана 🤍', from: 'out', gold: true },
+        { text: 'Рекомендую всем подругам ваш сервис! Честно и удобно', from: 'in' },
       ]
     },
     {
@@ -1508,10 +1508,10 @@ window.addEventListener('scroll', () => {
       initial: 'С',
       badge: '💫 Wow',
       messages: [
-        { text: 'Доброе утро ☀️ Хочу туфли Valentino, видела у вас в историях', from: 'in' },
-        { text: 'Привет! Да, беру на следующий полёт. Размер?', from: 'out' },
-        { text: '38, но у меня немного широкая стопа...', from: 'in' },
-        { text: 'Замерю в бутике и напишу до покупки — не волнуйтесь 🙏', from: 'out' },
+        { text: 'Доброе утро ☀️ Хочу туфли Valentino, видела у вас в историях', from: 'in' },
+        { text: 'Привет! Да, беру на следующий полёт. Размер?', from: 'out' },
+        { text: '38, но у меня немного широкая стопа...', from: 'in' },
+        { text: 'Замерю в бутике и напишу до покупки — не волнуйтесь 🙏', from: 'out' },
         { text: 'Сели идеально!!! Вы такая внимательная, это редкость 💛', from: 'in', gold: true },
       ]
     },
@@ -1521,7 +1521,7 @@ window.addEventListener('scroll', () => {
       badge: '👑 Люкс',
       messages: [
         { text: 'Смотрела кучу байеров — выбрала вас. Хочу YSL клатч', from: 'in' },
-        { text: 'Спасибо за доверие! Уточню наличие в Париже и отпишу', from: 'out' },
+        { text: 'Спасибо за доверие! Уточню наличие в Париже и отпишу', from: 'out' },
         { text: 'Есть! Выкупаю?', from: 'out' },
         { text: 'Да!! Давайте! Реквизиты скиньте', from: 'in' },
         { text: 'Катя, это просто мечта. Счастливая жена это самое главное ❤️', from: 'in', gold: true },
@@ -1532,11 +1532,11 @@ window.addEventListener('scroll', () => {
       initial: 'О',
       badge: '🛍️ Smart',
       messages: [
-        { text: 'Сравнивала — в бутике Москва 180 000₽, у вас вышло 143 000₽', from: 'in' },
-        { text: 'Да, экономия на курсе + нет наценки российского рынка 💡', from: 'out' },
-        { text: 'Когда следующая закупка в Милане?', from: 'in' },
-        { text: 'Уже 15-го! Запишитесь, беру предзаказы до 12-го', from: 'out', gold: true },
-        { text: 'Записалась! И ещё одну подругу привела 😄', from: 'in' },
+        { text: 'Сравнивала — в бутике Москва 180 000₽, у вас вышло 143 000₽', from: 'in' },
+        { text: 'Да, экономия на курсе + нет наценки российского рынка 💡', from: 'out' },
+        { text: 'Когда следующая закупка в Милане?', from: 'in' },
+        { text: 'Уже 15-го! Запишитесь, беру предзаказы до 12-го', from: 'out', gold: true },
+        { text: 'Записалась! И ещё одну подругу привела 😄', from: 'in' },
       ]
     },
     {
@@ -1544,9 +1544,9 @@ window.addEventListener('scroll', () => {
       initial: 'Т',
       badge: '🤍 Доверие',
       messages: [
-        { text: 'Катя, всё получила! Отчёт как и обещали, с фото из бутика', from: 'in' },
+        { text: 'Катя, всё получила! Отчёт как и обещали, с фото из бутика', from: 'in' },
         { text: 'Как всегда — всё прозрачно 😊 понравилось?', from: 'out' },
-        { text: 'Это уже 4-я покупка у вас. Уже не представляю другой шоппинг', from: 'in', gold: true },
+        { text: 'Это уже 4-я покупка у вас. Уже не представляю другой шоппинг', from: 'in', gold: true },
         { text: 'Очень рада что доверяете! Это моя главная мотивация 🧡', from: 'out' },
         { text: 'Когда следующий полёт? Уже мониторю wishlist 😅', from: 'in' },
       ]
