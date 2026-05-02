@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurum Avenue — Люкс из Европы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FFFBE9;
+    --brown: #2F211A;
+    --wine: #711515;
+    --blue: #84AFEB;
+    --gold: #E1B74E;
+    --brown-mid: #6B4F3A;
+    --brown-light: #9C7E68;
+    --text-light: rgba(47,33,26,0.6);
+    --border: rgba(47,33,26,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--cream);
+    color: var(--brown);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 998; opacity: 0.5;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 22px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,251,233,0.93);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+    transition: all 0.4s ease;
+  }
+
+  .nav-logo {
+    text-decoration: none;
+    display: flex; flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+    gap: 0;
+  }
+  .nav-logo span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--brown);
+    font-style: normal;
+    display: block;
+  }
+  .nav-logo .logo-line2 {
+    /* A of AVENUE aligns diagonally with A of AURUM */
+    padding-left: 0;
+    margin-left: -0.38em;
+  }
+
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-light); text-decoration: none; transition: color 0.3s;
+    font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--brown); }
+
+  .nav-cta {
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--cream); text-decoration: none;
+    background: var(--brown);
+    padding: 11px 26px; transition: all 0.3s;
+    font-weight: 500;
+  }
+  .nav-cta:hover { background: var(--wine); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid; grid-template-columns: 1fr 1fr;
+    position: relative; overflow: hidden;
+  }
+
+  .hero-left {
+    background: var(--brown);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 140px 72px 80px;
+    position: relative; overflow: hidden;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute; top: -80px; right: -80px;
+    width: 360px; height: 360px;
+    background: radial-gradient(circle, rgba(225,183,78,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 9px; letter-spacing: 0.38em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 28px; font-weight: 500;
+    opacity: 1;
+  }
+
+  .hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(40px, 5vw, 66px);
+    font-weight: 300; line-height: 1.1; letter-spacing: 0em;
+    color: var(--cream); margin-bottom: 28px;
+    opacity: 1;
+  }
+  .hero-title em { font-style: italic; color: #E2C98A; font-family: 'Cormorant Garamond', serif; font-size: 1.05em; }
+
+  .hero-desc {
+    font-size: 14px; line-height: 1.95;
+    color: rgba(255,251,233,0.6); max-width: 360px; margin-bottom: 48px;
+    opacity: 1;
+  }
+
+  .hero-btn {
+    display: inline-block; font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--cream); text-decoration: none;
+    border-bottom: 1px solid var(--gold); padding-bottom: 7px;
+    transition: all 0.3s; width: fit-content; font-weight: 500;
+    opacity: 1;
+  }
+  .hero-btn:hover { color: var(--gold); letter-spacing: 0.3em; }
+
+  .hero-right {
+    background: var(--cream); position: relative;
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+  }
+
+  .hero-right-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 70%, rgba(225,183,78,0.1) 0%, transparent 60%);
+  }
+
+  .hero-monogram {
+    font-family: 'Manrope', sans-serif;
+    font-size: 200px; font-weight: 300;
+    color: rgba(47,33,26,0.05); line-height: 1;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: -0.05em; white-space: nowrap; pointer-events: none;
+  }
+
+  .hero-visual {
+    position: relative; z-index: 2; padding: 60px;
+    opacity: 1;
+  }
+
+  .hero-card {
+    background: white; border: 1px solid rgba(47,33,26,0.1);
+    padding: 44px 48px; position: relative; max-width: 360px;
+    box-shadow: 0 32px 64px rgba(47,33,26,0.1);
+  }
+  .hero-card::before {
+    content: ''; position: absolute;
+    top: 14px; left: 14px; right: -14px; bottom: -14px;
+    border: 1px solid rgba(225,183,78,0.2); z-index: -1;
+  }
+
+  /* STAMP in hero */
+  .hero-stamp {
+    position: absolute; top: -40px; right: -36px;
+    width: 100px; height: 100px;
+    transform: rotate(14deg); opacity: 0.9; z-index: 5;
+  }
+
+  .hero-card-label {
+    font-size: 8px; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 22px; font-weight: 500;
+  }
+  .hero-card h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px; font-weight: 500; color: var(--brown); letter-spacing: 0em;
+    margin-bottom: 16px; line-height: 1.3;
+  }
+  .hero-card p { font-size: 14px; line-height: 1.85; color: var(--text-light); letter-spacing: 0.02em; }
+  .hero-card-divider { width: 36px; height: 1px; background: var(--gold); margin: 20px 0; }
+  .hero-card-stats { display: flex; gap: 28px; }
+  .stat-num {
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px; font-weight: 300; color: var(--brown); display: block;
+  }
+  .stat-label { font-size: 9px; letter-spacing: 0.12em; color: var(--text-light); text-transform: uppercase; font-weight: 500; }
+
+  /* MARQUEE */
+  .marquee-wrap { background: var(--brown); padding: 16px 0; overflow: hidden; white-space: nowrap; }
+  .marquee-track { display: inline-block; animation: marquee 32s linear infinite; }
+  .marquee-track span { font-size: 9px; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold); margin: 0 44px; font-weight: 500; }
+  .marquee-track .dot { color: rgba(225,183,78,0.4); font-size: 12px; vertical-align: middle; margin: 0; }
+
+  /* SECTION BASE */
+  .section { padding: 110px 60px; max-width: 1280px; margin: 0 auto; }
+  .section-label { font-size: 9px; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; font-weight: 500; }
+  .section-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(32px, 4vw, 48px); font-weight: 300; letter-spacing: 0.01em;
+    color: var(--brown); line-height: 1.12; margin-bottom: 56px;
+  }
+  .section-title em { font-style: italic; }
+
+  /* SERVICES */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); align-items: stretch; }
+
+  .service-card {
+    background: var(--cream); padding: 48px 40px;
+    transition: background 0.4s; position: relative; overflow: hidden;
+  }
+  .service-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 2px; background: var(--wine); transition: width 0.5s ease;
+  }
+  .service-card:hover::after { width: 100%; }
+  .service-card:hover { background: white; }
+
+  .service-num {
+    font-family: 'Manrope', sans-serif;
+    font-size: 56px; font-weight: 300;
+    color: rgba(225,183,78,0.2); line-height: 1; margin-bottom: 22px;
+  }
+  .service-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px; font-weight: 500; color: var(--brown); letter-spacing: 0.01em; min-height: 56px;
+    margin-bottom: 14px; line-height: 1.3;
+  }
+  .service-desc { font-size: 14px; line-height: 1.85; color: var(--text-light); flex-grow: 1; min-height: 120px; letter-spacing: 0.02em; }
+  .service-tags { margin-top: 26px; padding-top: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    font-size: 8px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--brown-light); border: 1px solid var(--border); padding: 5px 11px; font-weight: 500;
+  }
+
+  /* decorative stamp on service card */
+  .svc-stamp-wrap {
+    position: absolute; bottom: 20px; right: 16px;
+    width: 80px; height: 80px;
+    opacity: 0.1; transform: rotate(-8deg); pointer-events: none;
+  }
+
+  /* HOW IT WORKS */
+  .how-section { background: var(--brown); padding: 110px 60px; }
+  .how-inner { max-width: 1280px; margin: 0 auto; }
+  .how-section .section-title { color: var(--cream); }
+  .how-section .section-label { color: var(--gold); }
+
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; margin-top: 56px; position: relative;
+  }
+  .steps-grid::before {
+    content: ''; position: absolute; top: 26px; left: 8%; right: 8%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(225,183,78,0.35), rgba(225,183,78,0.35), transparent);
+  }
+
+  .step { padding: 0 28px 0 0; position: relative; }
+  .step-num {
+    width: 52px; height: 52px; border: 1px solid rgba(225,183,78,0.35);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 28px; background: var(--brown);
+  }
+  .step-num span { font-family: 'Manrope', sans-serif; font-size: 20px; color: var(--gold); }
+  .step h4 { font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 500; color: var(--cream); letter-spacing: 0.01em; margin-bottom: 10px; }
+  .step p { font-size: 14px; line-height: 1.7; color: rgba(255,251,233,0.88); letter-spacing: 0.02em; }
+
+  /* CHANNELS */
+  .channels-section { padding: 110px 60px; background: white; }
+  .channels-inner { max-width: 1280px; margin: 0 auto; }
+  .channels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; align-items: stretch; }
+
+  .channel-card {
+    border: 1px solid var(--border); padding: 40px 36px;
+    background: var(--cream); transition: all 0.4s;
+    text-decoration: none; display: block; position: relative; overflow: hidden;
+  }
+  .channel-card:hover { background: white; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(47,33,26,0.09); }
+
+  .channel-stamp-wrap {
+    position: absolute; top: -10px; right: 24px;
+    width: 72px; height: 72px;
+    opacity: 0.18; transform: rotate(10deg); pointer-events: none;
+  }
+
+  .channel-icon { width: 44px; height: 44px; background: var(--brown); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+  .channel-icon svg { width: 20px; height: 20px; fill: var(--cream); }
+  .channel-label { font-size: 8px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 500; }
+  .channel-title { font-family: 'Manrope', sans-serif; font-size: 19px; font-weight: 500; letter-spacing: 0.01em; color: var(--brown); margin-bottom: 12px; line-height: 1.3; min-height: 56px; }
+  .channel-desc { font-size: 14px; line-height: 1.85; color: var(--text-light); margin-bottom: 24px; flex-grow: 1; min-height: 100px; letter-spacing: 0.02em; }
+  .channel-link {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--brown); border-bottom: 1px solid var(--gold);
+    padding-bottom: 4px; display: inline-block; transition: letter-spacing 0.3s; font-weight: 500;
+    margin-top: auto;
+  }
+  .channel-card:hover .channel-link { letter-spacing: 0.28em; }
+
+  /* ABOUT */
+  .about-section {
+    padding: 110px 60px; max-width: 1280px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center;
+  }
+
+  .portrait-frame {
+    background: white; border: 1px solid var(--border); padding: 36px; position: relative;
+  }
+  .portrait-frame::after {
+    content: ''; position: absolute;
+    top: 18px; left: 18px; right: -18px; bottom: -18px;
+    border: 1px solid rgba(225,183,78,0.2); z-index: -1;
+  }
+
+  .portrait-stamp-wrap {
+    position: absolute; bottom: 56px; right: -28px;
+    width: 92px; height: 92px;
+    transform: rotate(8deg); opacity: 0.88; z-index: 5;
+  }
+
+  .portrait-img-placeholder {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(135deg, var(--brown) 0%, var(--brown-mid) 100%);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .portrait-img-placeholder span { font-family: 'Manrope', sans-serif; font-size: 72px; color: rgba(255,251,233,0.15); }
+
+  .portrait-caption { margin-top: 20px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .portrait-name { font-family: 'Manrope', sans-serif; font-size: 18px; font-weight: 500; letter-spacing: 0.01em; color: var(--brown); }
+  .portrait-role { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-top: 4px; font-weight: 500; }
+  .portrait-since { font-family: 'Manrope', sans-serif; font-size: 13px; color: var(--gold); font-style: italic; }
+
+  .about-right p { font-size: 14px; line-height: 2; color: var(--text-light); margin-bottom: 22px; letter-spacing: 0.02em; }
+  .about-right p strong { color: var(--brown); font-weight: 400; }
+
+  .about-tagline { font-family: 'Cormorant Garamond', serif;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px; font-style: italic; font-weight: 300;
+    color: var(--brown); line-height: 1.5;
+    border-left: 2px solid var(--gold); padding-left: 20px; margin: 32px 0;
+  }
+
+  .about-values { display: flex; flex-direction: column; }
+  .value-item { padding: 17px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 18px; }
+  .value-dot { width: 5px; height: 5px; background: var(--wine); flex-shrink: 0; border-radius: 50%; }
+  .value-text { font-size: 14px; color: var(--text-light); line-height: 1.7; }
+
+  /* CONTACT */
+  .contact-section { background: var(--brown); padding: 110px 60px; position: relative; overflow: hidden; }
+
+  .contact-bg-stamp {
+    position: absolute; top: 50px; left: 50px;
+    width: 160px; height: 160px;
+    opacity: 0.12; transform: rotate(-6deg); pointer-events: none;
+  }
+
+  .contact-section::before {
+    content: 'AA'; position: absolute; right: -40px; top: 50%;
+    transform: translateY(-50%); font-family: 'Manrope', sans-serif;
+    font-size: 380px; color: rgba(255,251,233,0.025); line-height: 1; pointer-events: none;
+  }
+
+  .contact-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
+
+  .contact-left .section-title { color: var(--cream); margin-bottom: 20px; }
+  .contact-subtitle { font-size: 14px; line-height: 1.9; color: rgba(255,251,233,0.82); max-width: 380px; }
+
+  .contact-right { padding-top: 16px; }
+  .contact-items { display: flex; flex-direction: column; }
+
+  .contact-item {
+    padding: 24px 0; border-bottom: 1px solid rgba(255,251,233,0.08);
+    display: flex; align-items: center; gap: 20px;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .contact-item:hover .contact-item-label { color: var(--gold); }
+
+  .contact-item-icon {
+    width: 40px; height: 40px;
+    border: 1px solid rgba(255,251,233,0.15);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    transition: background 0.3s;
+  }
+  .contact-item:hover .contact-item-icon { background: rgba(255,251,233,0.08); }
+  .contact-item-icon svg { width: 16px; height: 16px; }
+
+  .contact-item-type { font-size: 8px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; font-weight: 500; }
+  .contact-item-label { font-size: 15px; color: var(--cream); transition: color 0.3s; font-family: 'Manrope', sans-serif; font-weight: 400; letter-spacing: -0.01em; }
+
+  /* FOOTER */
+  footer {
+    background: #1A100A; padding: 44px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid rgba(255,251,233,0.06);
+  }
+  .footer-logo { font-family: 'Manrope', sans-serif; font-size: 13px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--cream); text-decoration: none; line-height: 1.2; display: flex; flex-direction: column; align-items: flex-start; } .footer-logo .logo-line2 { margin-left: -0.55em; }
+  .footer-copy { font-size: 10px; color: rgba(255,251,233,0.55); letter-spacing: 0.05em; }
+  .footer-links { display: flex; gap: 28px; }
+  .footer-links a { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,251,233,0.6); text-decoration: none; transition: color 0.3s; font-weight: 500; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* KEYFRAMES */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .reveal { opacity: 1; transform: translateY(0); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 110px 28px 56px; }
+    .hero-right { padding: 56px 28px; min-height: 380px; }
+    .hero-monogram { font-size: 110px; }
+    .section, .channels-section, .how-section { padding: 72px 24px; }
+    .services-grid, .channels-grid { grid-template-columns: 1fr; }
+    .steps-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    .steps-grid::before { display: none; }
+    .about-section { grid-template-columns: 1fr; gap: 44px; padding: 72px 24px; }
+    .contact-section { padding: 72px 24px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 44px; }
+    .contact-bg-stamp { display: none; }
+    footer { flex-direction: column; gap: 18px; padding: 36px 24px; text-align: center; }
+    .footer-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  /* PAGE BORDER — паспарту */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 10px;
+    border: 1px solid rgba(225,183,78,0.18);
+    pointer-events: none;
+    z-index: 997;
+  }
+
+  /* SECTION DIVIDER line */
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(225,183,78,0.3), transparent);
+    margin: 0;
+  }
+
+  /* ROMAN numeral watermark per section */
+  .section-roman {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.35em;
+    color: rgba(47,33,26,0.18);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 300;
+    display: block;
+  }
+
+  /* GOLD LINE accent — thin horizontal rule */
+  .gold-rule {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 32px;
+    opacity: 0.7;
+  }
+
+  /* HERO — add deep gradient overlay */
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 0% 100%, rgba(113,21,21,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* SECTION background texture alternating */
+  #services { background: var(--cream); }
+  #services .section { position: relative; }
+  #services .section::before {
+    content: 'I';
+    font-family: 'Manrope', sans-serif;
+    font-size: 280px;
+    font-weight: 300;
+    color: rgba(47,33,26,0.025);
+    position: absolute;
+    right: -20px; top: 40px;
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+  }
+
+  /* CHANNELS section watermark */
+  .channels-inner { position: relative; }
+  .channels-inner::before {
+    content: 'II';
+    font-family: 'Manrope', sans-serif;
+    font-size: 280px;
+    font-weight: 300;
+    color: rgba(47,33,26,0.025);
+    position: absolute;
+    right: -20px; top: 40px;
+    line-height: 1;
+    pointer-events: none;
+    letter-spacing: -0.05em;
+  }
+
+  /* BIGGER section padding for more air */
+  .section { padding: 130px 60px; }
+  .channels-section { padding: 130px 60px; }
+  .how-section { padding: 130px 60px; }
+
+  /* More breathing room inside cards */
+  .service-card { padding: 56px 44px; }
+  .channel-card { padding: 48px 40px; }
+
+  /* Smoother reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* LETTER REVEAL animation for section labels */
+  .section-label {
+    overflow: hidden;
+  }
+
+  /* Elegant hover on service cards */
+  .service-card:hover .service-num {
+    color: rgba(225,183,78,0.45);
+    transition: color 0.6s ease;
+  }
+
+  /* Contact items bigger breathing */
+  .contact-item { padding: 28px 0; }
+
+  /* About section more space */
+  .about-section { padding: 130px 60px; gap: 100px; }
+
+  /* Hero desc line-height */
+  .hero-desc { line-height: 2.1; }
+
+  /* Subtle gradient on cream sections */
+  .channels-section {
+    background: linear-gradient(180deg, white 0%, var(--cream) 100%);
+  }
+
+  @media (max-width: 900px) {
+    body::after { inset: 6px; }
+    .section, .channels-section, .how-section, .about-section { padding: 80px 24px; }
+  }
+
+  /* ===== REVIEWS ===== */
+  .reviews-section {
+    background: var(--brown);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .reviews-left {
+    padding: 130px 72px 80px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; z-index: 2;
+  }
+
+  .reviews-sub {
+    font-size: 13px; line-height: 1.9;
+    color: rgba(255,251,233,0.5);
+    max-width: 300px; margin-bottom: 40px;
+  }
+
+  .reviews-counter {
+    display: flex; align-items: baseline; gap: 4px;
+    margin-bottom: 20px;
+  }
+  .reviews-counter-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px; font-weight: 300; color: var(--gold);
+    line-height: 1; transition: all 0.3s;
+  }
+  .reviews-counter-sep {
+    font-size: 18px; color: rgba(255,251,233,0.3);
+    margin: 0 4px;
+  }
+  .reviews-counter-total {
+    font-size: 18px; color: rgba(255,251,233,0.3);
+  }
+
+  .reviews-nav {
+    display: flex; gap: 12px; margin-bottom: 24px;
+  }
+  .reviews-btn {
+    width: 44px; height: 44px;
+    border: 1px solid rgba(255,251,233,0.2);
+    background: transparent; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,251,233,0.6);
+    transition: all 0.3s;
+  }
+  .reviews-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+  .reviews-btn svg { width: 18px; height: 18px; }
+
+  .reviews-hint {
+    font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,251,233,0.25);
+  }
+
+  /* Right side — stack */
+  .reviews-right {
+    display: flex; align-items: center; justify-content: center;
+    padding: 80px 60px 80px 20px;
+    position: relative;
+  }
+
+  .reviews-stack {
+    position: relative;
+    width: 220px;
+    height: 390px; /* 9:16 ratio for 220px wide */
+  }
+
+  .review-card {
+    position: absolute;
+    top: 0; left: 0;
+    width: 220px; height: 390px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.4s ease,
+                box-shadow 0.4s ease;
+    user-select: none;
+    will-change: transform;
+  }
+
+  /* Stack positions: top card, card behind, further behind... */
+  .review-card[data-pos="0"] {
+    transform: rotate(0deg) translate(0px, 0px);
+    z-index: 10; opacity: 1;
+    box-shadow: 0 28px 70px rgba(0,0,0,0.6);
+  }
+  .review-card[data-pos="1"] {
+    transform: rotate(3deg) translate(18px, 12px);
+    z-index: 9; opacity: 0.85;
+  }
+  .review-card[data-pos="2"] {
+    transform: rotate(6deg) translate(34px, 22px);
+    z-index: 8; opacity: 0.65;
+  }
+  .review-card[data-pos="3"] {
+    transform: rotate(8deg) translate(46px, 30px);
+    z-index: 7; opacity: 0.45;
+  }
+  .review-card[data-pos="4"] {
+    transform: rotate(10deg) translate(56px, 36px);
+    z-index: 6; opacity: 0.28;
+  }
+  /* Hidden cards stacked together at the back */
+  .review-card[data-pos="5"],
+  .review-card[data-pos="6"],
+  .review-card[data-pos="7"] {
+    transform: rotate(11deg) translate(62px, 40px);
+    z-index: 5; opacity: 0.12;
+  }
+
+  /* Swipe-out animation class */
+  .review-card.fly-out {
+    transform: rotate(-18deg) translate(-380px, -80px) !important;
+    opacity: 0 !important;
+    transition: transform 0.45s cubic-bezier(0.55, 0, 1, 0.45),
+                opacity 0.35s ease !important;
+  }
+  /* Fly in from back */
+  .review-card.fly-in {
+    transform: rotate(12deg) translate(72px, 46px) !important;
+    opacity: 0 !important;
+    transition: none !important;
+  }
+
+  /* Phone mockup inside card */
+  .review-phone {
+    width: 100%; height: 100%;
+    background: #1c1c1e;
+    display: flex; flex-direction: column;
+    font-family: -apple-system, 'SF Pro Display', sans-serif;
+  }
+
+  .review-phone-header {
+    background: #1c1c1e;
+    padding: 10px 12px 8px;
+    display: flex; align-items: center; gap: 8px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.08);
+    flex-shrink: 0;
+  }
+  .review-phone-avatar {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: linear-gradient(135deg, #711515 0%, #E1B74E 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: white; font-weight: 600; flex-shrink: 0;
+  }
+  .review-phone-name {
+    font-size: 11px; color: #fff; font-weight: 500; line-height: 1.2;
+  }
+  .review-phone-status {
+    font-size: 9px; color: #8e8e93;
+  }
+  .review-phone-back {
+    margin-left: auto;
+    font-size: 9px; color: #0a84ff;
+  }
+
+  .review-phone-messages {
+    flex: 1; overflow: hidden;
+    padding: 10px 10px 6px;
+    display: flex; flex-direction: column; gap: 6px;
+    justify-content: flex-end;
+  }
+
+  .review-msg {
+    max-width: 82%;
+    padding: 7px 10px;
+    border-radius: 14px;
+    font-size: 10px; line-height: 1.45; color: #fff;
+  }
+  .review-msg.incoming {
+    background: #3a3a3c;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .review-msg.outgoing {
+    background: #711515;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  .review-msg.outgoing.gold {
+    background: linear-gradient(135deg, #8B6914 0%, #E1B74E 100%);
+  }
+  .review-msg-time {
+    font-size: 8px; color: #8e8e93; text-align: right;
+    margin-top: 1px;
+  }
+
+  .review-phone-bar {
+    height: 4px; background: #000;
+    display: flex; align-items: center; justify-content: center;
+    padding-bottom: 2px; flex-shrink: 0;
+  }
+  .review-phone-bar-line {
+    width: 100px; height: 3px; background: #fff;
+    border-radius: 2px; opacity: 0.25;
+  }
+
+  /* Drag interaction */
+  .review-card[data-pos="0"] {
+    touch-action: none;
+  }
+
+  /* Reaction badge on top card */
+  .review-badge {
+    position: absolute; top: 14px; right: -10px;
+    background: var(--gold);
+    color: var(--brown);
+    font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+    font-weight: 600; padding: 4px 10px;
+    transform: rotate(6deg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 20;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 900px) {
+    .reviews-section {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+    .reviews-left {
+      padding: 80px 24px 48px;
+    }
+    .reviews-right {
+      padding: 0 24px 80px;
+      justify-content: flex-start;
+    }
+  }
+
+  .calc-intro {
+    font-size: 13px; line-height: 1.9; color: var(--text-light);
+    max-width: 560px; margin-bottom: 44px;
+  }
+
+  .calc-wrapper { max-width: 760px; }
+
+  .calc-rules {
+    display: flex; flex-wrap: wrap; gap: 10px 28px;
+    margin-bottom: 36px;
+  }
+  .calc-rule-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; letter-spacing: 0.04em; color: var(--text-light);
+  }
+  .calc-rule-dot {
+    width: 4px; height: 4px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+
+  .calc-categories {
+    display: flex; gap: 0; margin-bottom: 32px;
+    border: 1px solid var(--border);
+  }
+  .calc-cat {
+    flex: 1; padding: 12px 20px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-light); background: transparent;
+    border: none; cursor: pointer; transition: all 0.3s;
+    font-weight: 500;
+  }
+  .calc-cat:first-child { border-right: 1px solid var(--border); }
+  .calc-cat.active { background: var(--brown); color: var(--cream); }
+  .calc-cat:not(.active):hover { color: var(--brown); }
+
+  .calc-input-row { margin-bottom: 32px; }
+  .calc-input-wrap {
+    display: flex; align-items: center;
+    border-bottom: 1px solid var(--border); margin-bottom: 20px;
+    padding-bottom: 4px;
+  }
+  .calc-currency {
+    font-size: 22px; color: var(--gold); font-weight: 300;
+    margin-right: 10px; font-family: 'Cormorant Garamond', serif;
+  }
+  .calc-input {
+    flex: 1; border: none; background: transparent; outline: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px; font-weight: 300; color: var(--brown);
+    width: 100%;
+  }
+  .calc-input::placeholder { color: rgba(47,33,26,0.2); }
+  .calc-input::-webkit-outer-spin-button,
+  .calc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+  .calc-slider-wrap { position: relative; }
+  .calc-slider {
+    width: 100%; -webkit-appearance: none; appearance: none;
+    height: 1px; background: var(--border); outline: none;
+    cursor: pointer;
+  }
+  .calc-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 14px; height: 14px;
+    border-radius: 50%; background: var(--wine); cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .calc-slider::-webkit-slider-thumb:hover { transform: scale(1.3); }
+  .calc-slider::-moz-range-thumb {
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--wine); cursor: pointer; border: none;
+  }
+  .calc-slider-labels {
+    display: flex; justify-content: space-between;
+    margin-top: 6px;
+    font-size: 9px; letter-spacing: 0.1em; color: var(--text-light);
+  }
+
+  .calc-result {
+    background: white; border: 1px solid var(--border);
+    padding: 32px 36px;
+  }
+  .calc-result-inner {
+    display: flex; align-items: flex-end; gap: 0;
+    flex-wrap: wrap; margin-bottom: 18px;
+  }
+  .calc-result-col { flex: 1; min-width: 100px; }
+  .calc-result-total-col { flex: 1.4; }
+  .calc-result-plus, .calc-result-eq {
+    font-size: 20px; color: rgba(47,33,26,0.25);
+    padding: 0 10px; align-self: center; font-weight: 300;
+  }
+  .calc-result-label {
+    font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--text-light); margin-bottom: 6px; font-weight: 500;
+  }
+  .calc-result-val {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px; font-weight: 300; color: var(--brown);
+  }
+  .calc-result-total {
+    font-size: 30px; color: var(--wine);
+  }
+  .calc-result-rub {
+    font-size: 12px; color: var(--text-light);
+    margin-top: 4px; letter-spacing: 0.05em;
+  }
+  .calc-rate-note {
+    font-size: 10px; color: var(--text-light);
+    letter-spacing: 0.06em; margin-bottom: 12px;
+  }
+  .calc-disclaimer {
+    font-size: 10px; color: var(--text-light); line-height: 1.7;
+    border-top: 1px solid var(--border); padding-top: 14px;
+    letter-spacing: 0.03em;
+  }
+
+  .calc-outofrange {
+    background: rgba(113,21,21,0.05);
+    border: 1px solid rgba(113,21,21,0.15);
+    padding: 22px 28px; text-align: center;
+  }
+  .calc-outofrange p {
+    font-size: 13px; color: var(--brown); line-height: 1.8;
+  }
+  .calc-outofrange a {
+    color: var(--wine); text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .calc-result-inner { gap: 12px; }
+    .calc-result-col { min-width: 80px; flex: unset; }
+    .calc-result-plus, .calc-result-eq { padding: 0 6px; font-size: 16px; }
+    .calc-result-val { font-size: 16px; }
+    .calc-result-total { font-size: 22px; }
+    .calc-categories { flex-direction: column; }
+    .calc-cat:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+    .calc-result { padding: 20px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo"><span class="logo-line1">AURUM</span><span class="logo-line2">AVENUE</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#how">Как работает</a></li>
+    <li><a href="#catalog">Каталог</a></li>
+    <li><a href="#about">О сервисе</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#calculator">Расчёт</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Написать</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Байерский сервис · Европа → Россия</p>
+    <h1 class="hero-title">Европейский<br>люкс —<br><em>без границ</em></h1>
+    <p class="hero-desc">Для девушек, которые ценят стиль, комфорт и своё время. Европейский люкс по умной цене — без хлопот и перелётов.</p>
+    <a href="#services" class="hero-btn">Узнать о сервисе</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-right-bg"></div>
+    <div class="hero-monogram">AA</div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-stamp">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
+        </div>
+        <div class="hero-card-label">Aurum Avenue · Buyer Service</div>
+        <h3>Личный байер<br>в Европе</h3>
+        <p>100% оригинал · Полный комплект · Официальные чеки</p>
+        <div class="hero-card-divider"></div>
+        <div class="hero-card-stats">
+          <div><span class="stat-num">3+</span><span class="stat-label">года опыта</span></div>
+          <div><span class="stat-num">100%</span><span class="stat-label">оригинал</span></div>
+          <div><span class="stat-num">ЕС</span><span class="stat-label">бутики</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Hermès</span><span class="dot">·</span><span>Chanel</span><span class="dot">·</span>
+    <span>Louis Vuitton</span><span class="dot">·</span><span>Cartier</span><span class="dot">·</span>
+    <span>Van Cleef & Arpels</span><span class="dot">·</span><span>Dior</span><span class="dot">·</span>
+    <span>Bottega Veneta</span><span class="dot">·</span><span>Celine</span><span class="dot">·</span>
+    <span>Bulgari</span><span class="dot">·</span><span>Prada</span><span class="dot">·</span>
+    <span>Valentino</span><span class="dot">·</span><span>Ferragamo</span><span class="dot">·</span>
+    <span>Hermès</span><span class="dot">·</span><span>Chanel</span><span class="dot">·</span>
+    <span>Louis Vuitton</span><span class="dot">·</span><span>Cartier</span><span class="dot">·</span>
+    <span>Van Cleef & Arpels</span><span class="dot">·</span><span>Dior</span><span class="dot">·</span>
+    <span>Bottega Veneta</span><span class="dot">·</span><span>Celine</span><span class="dot">·</span>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+<!-- SERVICES -->
+<section id="services">
+  <div class="section">
+    <span class="section-roman">I</span>
+    <div class="gold-rule"></div>
+    <p class="section-label reveal">Направления</p>
+    <h2 class="section-title reveal">Три формата<br><em>шоппинга</em></h2>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="svc-stamp-wrap">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
+        </div>
+        <div class="service-num">01</div>
+        <h3 class="service-title">Люкс из бутиков</h3>
+        <p class="service-desc">Флагманские бутики Европы — Birkin, Kelly, Chanel, Cartier, Van Cleef. Официальные чеки, полный комплект, 100% оригинал. Любая позиция под заказ.</p>
+        <div class="service-tags">
+          <span class="tag">Hermès</span><span class="tag">Chanel</span>
+          <span class="tag">Cartier</span><span class="tag">Van Cleef</span><span class="tag">Dior</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <h3 class="service-title">Смарт-шоппинг</h3>
+        <p class="service-desc">Люкс и премиум в мультибрендовых магазинах Европы. То же качество, умнее цена. Для тех, кто ценит выгоду без компромиссов по стилю.</p>
+        <div class="service-tags">
+          <span class="tag">Мультибренды</span><span class="tag">Смарт</span><span class="tag">До −60%</span><span class="tag">Италия</span>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <h3 class="service-title">Аутлет</h3>
+        <p class="service-desc">Parndorf Fashion Outlet и другие европейские аутлеты. Люкс и премиум со скидками до 70% — без лишних затрат на перелёт и проживание.</p>
+        <div class="service-tags">
+          <span class="tag">До −70%</span><span class="tag">Parndorf Fashion Outlet</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- HOW -->
+<section id="how" class="how-section">
+  <div class="how-inner">
+    <span class="section-roman" style="color:rgba(255,251,233,0.2)">II</span>
+    <div class="gold-rule"></div>
+    <p class="section-label reveal">Процесс</p>
+    <h2 class="section-title reveal">Как это<br><em>работает</em></h2>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="step-num"><span>01</span></div>
+        <h4>Заявка</h4>
+        <p>Пишете в мессенджер — описываете желаемую позицию или прикладываете референс.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num"><span>02</span></div>
+        <h4>Поиск и цена</h4>
+        <p>Нахожу позицию в европейских бутиках, рассчитываю финальную стоимость с доставкой.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num"><span>03</span></div>
+        <h4>Выкуп</h4>
+        <p>Выкупаю лично. Фотографирую, отправляю отчёт и официальный чек.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num"><span>04</span></div>
+        <h4>Доставка в РФ</h4>
+        <p>Надёжная доставка в Россию. Оригинальная упаковка, полный комплект.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- CHANNELS -->
+<section id="catalog" class="channels-section">
+  <div class="channels-inner">
+    <span class="section-roman">III</span>
+    <div class="gold-rule"></div>
+    <p class="section-label reveal">Telegram-каналы</p>
+    <h2 class="section-title reveal">Смотрите<br><em>каталог</em></h2>
+    <div class="channels-grid">
+      <a href="https://t.me/aurumbuyer" target="_blank" class="channel-card reveal">
+        <div class="channel-stamp-wrap">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
+        </div>
+        <div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
+        <div class="channel-label">Канал 01 · Флагман</div>
+        <h3 class="channel-title">Люкс & Ювелирные украшения</h3>
+        <p class="channel-desc">Флагманские бутики Европы. Hermès, Chanel, Cartier, Van Cleef, Dior и другие топ-дома.</p>
+        <span class="channel-link">Перейти в канал</span>
+      </a>
+      <a href="https://t.me/aurumavenuesmart" target="_blank" class="channel-card reveal">
+        <div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
+        <div class="channel-label">Канал 02 · Смарт</div>
+        <h3 class="channel-title">Аутлет & Мультибренды</h3>
+        <p class="channel-desc">Выгодные находки из европейских аутлетов и мультибрендовых магазинов.</p>
+        <span class="channel-link">Перейти в канал</span>
+      </a>
+      <a href="https://t.me/buyerkateeu" target="_blank" class="channel-card reveal">
+        <div class="channel-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
+        <div class="channel-label">Канал 03 · Премиум</div>
+        <h3 class="channel-title">Премиум-бренды</h3>
+        <p class="channel-desc">Лучшие премиум-марки Европы. Качество, стиль и доступность — в одном месте.</p>
+        <span class="channel-link">Перейти в канал</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-section">
+    <div class="about-left">
+      <div class="portrait-frame reveal">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top;display:block;" alt="Катерина Макарени">
+        <div class="portrait-stamp-wrap">
+          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
+        </div>
+        <div class="portrait-caption">
+          <div>
+            <div class="portrait-name">Катерина Макарени</div>
+            <div class="portrait-role">Основатель · Личный байер</div>
+          </div>
+          <div class="portrait-since">с 2023</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <span class="section-roman">IV</span>
+      <div class="gold-rule"></div>
+      <p class="section-label reveal">О сервисе</p>
+      <a href="#" class="nav-logo reveal" style="margin-bottom:48px;pointer-events:none;"><span class="logo-line1" style="font-size:48px;letter-spacing:0.32em;display:block;">AURUM</span><span class="logo-line2" style="font-size:48px;letter-spacing:0.32em;display:block;margin-left:-0.38em;">AVENUE</span></a>
+      <p class="reveal">Меня зовут Катерина. Я основала <strong>Aurum Avenue</strong> — байерский сервис по выкупу оригинальных люкс-брендов в Европе с доставкой в Россию.</p>
+      <p class="reveal">Живу между Латвией и Петербургом. С 2023 года помогаю клиентам разгружать их Wish List. Мой подход основан на <strong>внимании к деталям, доверии и уютной атмосфере общения.</strong></p>
+      <div class="about-tagline reveal">
+        Пока вы живёте свою счастливую жизнь, о вашем шоппинге заботится сервис Aurum Avenue.
+      </div>
+      <div class="about-values reveal">
+        <div class="value-item"><div class="value-dot"></div><span class="value-text">100% оригинал — официальные бутики, чеки, полный комплект</span></div>
+        <div class="value-item"><div class="value-dot"></div><span class="value-text">Личный подход — каждый клиент получает индивидуальный сервис</span></div>
+        <div class="value-item"><div class="value-dot"></div><span class="value-text">Прозрачность — фото, чек и отчёт на каждом этапе</span></div>
+        <div class="value-item"><div class="value-dot"></div><span class="value-text">Доставка по России — надёжно, в оригинальной упаковке</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- CALCULATOR -->
+<section id="calculator">
+  <div class="section">
+    <span class="section-roman">VI</span>
+    <h2 class="section-title reveal">Примерный<br><em>расчёт</em></h2>
+    <p class="calc-intro reveal">Введите стоимость товара — я покажу ориентировочную итоговую сумму. Точная цена зависит от условий выкупа, доставки и курса на день оплаты.</p>
+
+    <div class="calc-wrapper reveal">
+      <!-- Rules hint -->
+      <div class="calc-rules">
+        <div class="calc-rule-item">
+          <span class="calc-rule-dot"></span>
+          <span>До 500€ — цена по запросу</span>
+        </div>
+        <div class="calc-rule-item">
+          <span class="calc-rule-dot"></span>
+          <span>500€ – 10 000€ — комиссия 10%</span>
+        </div>
+        <div class="calc-rule-item">
+          <span class="calc-rule-dot"></span>
+          <span>Свыше 10 000€ — цена по запросу</span>
+        </div>
+        <div class="calc-rule-item">
+          <span class="calc-rule-dot"></span>
+          <span>Доставка: ~100€ (ювелирка от 2000€ — 5% от стоимости)</span>
+        </div>
+      </div>
+
+      <!-- Category selector -->
+      <div class="calc-categories">
+        <button class="calc-cat active" data-cat="other">Сумки / Одежда / Обувь</button>
+        <button class="calc-cat" data-cat="jewelry">Ювелирные украшения</button>
+      </div>
+
+      <!-- Input -->
+      <div class="calc-input-row">
+        <div class="calc-input-wrap">
+          <span class="calc-currency">€</span>
+          <input type="number" id="calcInput" class="calc-input" placeholder="Введите сумму" min="0" max="10000" step="10">
+        </div>
+        <div class="calc-slider-wrap">
+          <input type="range" id="calcSlider" class="calc-slider" min="500" max="10000" step="50" value="1500">
+          <div class="calc-slider-labels">
+            <span>500€</span>
+            <span>10 000€</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="calc-result" id="calcResult">
+        <div class="calc-result-inner">
+          <div class="calc-result-col">
+            <div class="calc-result-label">Товар</div>
+            <div class="calc-result-val" id="resGoods">—</div>
+          </div>
+          <div class="calc-result-plus">+</div>
+          <div class="calc-result-col">
+            <div class="calc-result-label">Комиссия</div>
+            <div class="calc-result-val" id="resCommission">—</div>
+          </div>
+          <div class="calc-result-plus">+</div>
+          <div class="calc-result-col">
+            <div class="calc-result-label">Доставка</div>
+            <div class="calc-result-val" id="resDelivery">—</div>
+          </div>
+          <div class="calc-result-eq">=</div>
+          <div class="calc-result-col calc-result-total-col">
+            <div class="calc-result-label">Итого ~</div>
+            <div class="calc-result-val calc-result-total" id="resTotal">—</div>
+            <div class="calc-result-rub" id="resRub">—</div>
+          </div>
+        </div>
+        <div class="calc-rate-note" id="calcRateNote"></div>
+        <div class="calc-disclaimer">
+          ⚠ Расчёт ориентировочный. Точная сумма зависит от условий выкупа, тарифов доставки и курса на день оплаты.
+        </div>
+      </div>
+
+      <!-- Out of range message -->
+      <div class="calc-outofrange" id="calcOutOfRange" style="display:none;">
+        <p>Для уточнения стоимости <a href="#contact">напишите мне</a> — рассчитаю персонально.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="reviews-left">
+    <span class="section-roman" style="color:rgba(47,33,26,0.08)">VI</span>
+    <div class="gold-rule"></div>
+    <p class="section-label reveal" style="color:var(--gold)">Отзывы</p>
+    <h2 class="section-title reveal" style="color:var(--cream)">Клиенты<br><em>говорят</em></h2>
+    <p class="reviews-sub reveal">Реальные переписки — без купюр и постановки. Просто счастливые покупки.</p>
+    <div class="reviews-counter reveal">
+      <span class="reviews-counter-num" id="reviewsCounterNum">1</span>
+      <span class="reviews-counter-sep">/</span>
+      <span class="reviews-counter-total" id="reviewsCounterTotal">8</span>
+    </div>
+    <div class="reviews-nav reveal">
+      <button class="reviews-btn" id="reviewsPrev" aria-label="Назад">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button class="reviews-btn" id="reviewsNext" aria-label="Вперёд">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+    <p class="reviews-hint reveal">Нажимайте на карточки или используйте стрелки</p>
+  </div>
+
+  <div class="reviews-right">
+    <div class="reviews-stack" id="reviewsStack">
+      <!-- Cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="contact-bg-stamp">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="width:100%;height:100%;object-fit:contain;" alt="stamp">
+  </div>
+  <div class="contact-inner">
+    <div class="contact-left">
+      <span class="section-roman" style="color:rgba(225,183,78,0.4)">VII</span>
+      <div class="gold-rule" style="opacity:0.4"></div>
+      <p class="section-label reveal">Контакты</p>
+      <h2 class="section-title reveal">Напишите<br><em>мне</em></h2>
+      <p class="contact-subtitle reveal">Расскажите что ищете — я подберу лучший вариант. Отвечаю быстро, консультирую без обязательств.</p>
+    </div>
+    <div class="contact-right">
+      <div class="contact-items">
+        <a href="https://t.me/kmacare" target="_blank" class="contact-item reveal">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="rgba(225,183,78,0.8)"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.272l-2.952-.924c-.642-.204-.654-.642.136-.953l11.527-4.444c.537-.194 1.006.131.691.297z"/></svg></div>
+          <div><div class="contact-item-type">Telegram</div><div class="contact-item-label">@kmacare</div></div>
+        </a>
+        <a href="https://instagram.com/aurum.buyer" target="_blank" class="contact-item reveal">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="rgba(225,183,78,0.8)"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div>
+          <div><div class="contact-item-type">Instagram</div><div class="contact-item-label">@aurum.buyer</div></div>
+        </a>
+        <a href="https://wa.me/79673478631" target="_blank" class="contact-item reveal">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="rgba(225,183,78,0.8)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div><div class="contact-item-type">WhatsApp</div><div class="contact-item-label">+7 967 347 86 31</div></div>
+        </a>
+        <a href="https://max.ru/u/f9LHodD0cOKTdLYDC3YFAV0iJRGgRtIcsnhnMeBwlvBJXU7XS_ddxCu6pw0" target="_blank" class="contact-item reveal">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(225,183,78,0.85)" stroke-width="1.6">
+              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/>
+              <path d="M7 12l3.5 3.5L17 8.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div><div class="contact-item-type">MAX</div><div class="contact-item-label">Написать в MAX</div></div>
+        </a>
+        <a href="mailto:baltikbuyerk@gmail.com" class="contact-item reveal">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(225,183,78,0.8)" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+          <div><div class="contact-item-type">Email</div><div class="contact-item-label">baltikbuyerk@gmail.com</div></div>
+        </a>
+        <a href="tel:+79673478631" class="contact-item reveal">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(225,183,78,0.8)" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+          <div><div class="contact-item-type">Телефон</div><div class="contact-item-label">+7 967 347 86 31</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="footer-logo"><span>AURUM</span><span class="logo-line2">AVENUE</span></a>
+  <p class="footer-copy">© 2023 Aurum Avenue · Байерский сервис · Европа → Россия</p>
+  <div class="footer-links">
+    <a href="#services">Услуги</a>
+    <a href="#catalog">Каталог</a>
+    <a href="#contact">Контакты</a>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1 });
+reveals.forEach((el, i) => {
+  const parent = el.parentElement;
+  const siblings = Array.from(parent.querySelectorAll(':scope > .reveal'));
+  const idx = siblings.indexOf(el);
+  if (idx > 0) el.style.transitionDelay = idx * 0.1 + 's';
+  observer.observe(el);
+});
+
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.padding = window.scrollY > 50 ? '14px 60px' : '22px 60px';
+  nav.style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(47,33,26,0.07)' : 'none';
+});
+</script>
+<script>
+// ===== CALCULATOR =====
+(function() {
+  const EUR_TO_RUB = 101;
+  const DELIVERY_FLAT = 100;
+  const DELIVERY_JEWELRY_RATE = 0.05;
+  const COMMISSION_RATE = 0.10;
+  const THRESHOLD_LOW = 500;
+  const THRESHOLD_HIGH = 10000;
+  const JEWELRY_DELIVERY_THRESHOLD = 2000;
+
+  let currentCat = 'other';
+
+  const input = document.getElementById('calcInput');
+  const slider = document.getElementById('calcSlider');
+  const resultBox = document.getElementById('calcResult');
+  const outOfRange = document.getElementById('calcOutOfRange');
+  const resGoods = document.getElementById('resGoods');
+  const resCommission = document.getElementById('resCommission');
+  const resDelivery = document.getElementById('resDelivery');
+  const resTotal = document.getElementById('resTotal');
+  const resRub = document.getElementById('resRub');
+  const rateNote = document.getElementById('calcRateNote');
+
+  if (!input) return;
+
+  // Sync slider <-> input
+  slider.addEventListener('input', () => {
+    input.value = slider.value;
+    calculate();
+  });
+
+  input.addEventListener('input', () => {
+    const v = parseFloat(input.value) || 0;
+    if (v >= 500 && v <= 10000) slider.value = v;
+    calculate();
+  });
+
+  document.querySelectorAll('.calc-cat').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.calc-cat').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentCat = btn.dataset.cat;
+      calculate();
+    });
+  });
+
+  function fmt(n) {
+    return n.toLocaleString('ru-RU', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + '€';
+  }
+  function fmtRub(n) {
+    return n.toLocaleString('ru-RU', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + '₽';
+  }
+
+  function calculate() {
+    const price = parseFloat(input.value) || 0;
+
+    if (price <= 0) {
+      resultBox.style.display = 'none';
+      outOfRange.style.display = 'none';
+      return;
+    }
+
+    if (price < THRESHOLD_LOW || price > THRESHOLD_HIGH) {
+      resultBox.style.display = 'none';
+      outOfRange.style.display = 'block';
+      return;
+    }
+
+    outOfRange.style.display = 'none';
+    resultBox.style.display = 'block';
+
+    const commission = price * COMMISSION_RATE;
+
+    let delivery = DELIVERY_FLAT;
+    if (currentCat === 'jewelry' && price >= JEWELRY_DELIVERY_THRESHOLD) {
+      delivery = price * DELIVERY_JEWELRY_RATE;
+    }
+
+    const total = price + commission + delivery;
+    const totalRub = total * EUR_TO_RUB;
+
+    resGoods.textContent = fmt(price);
+    resCommission.textContent = fmt(commission);
+    resDelivery.textContent = fmt(delivery);
+    resTotal.textContent = fmt(total);
+    resRub.textContent = '≈ ' + fmtRub(totalRub);
+    rateNote.textContent = 'Курс расчёта: 1€ = ' + EUR_TO_RUB + '₽ (ориентировочный)';
+  }
+
+  // Init
+  input.value = 1500;
+  calculate();
+})();
+</script>
+<script>
+// ===== REVIEWS STACK =====
+(function() {
+  const reviews = [
+    {
+      name: 'Анастасия',
+      initial: 'А',
+      badge: '❤️ Счастлива',
+      messages: [
+        { text: 'Катя, добрый день! Хотела узнать про Dior сумочку из вашего каталога 🙏', from: 'in' },
+        { text: 'Привет! Да, можем выкупить, как раз летим в Париж 10 сентября ✈️', from: 'out' },
+        { text: 'Ура! И сколько выйдет итого?', from: 'in' },
+        { text: 'Цена бутика 2340€ + доставка — считаю, напишу через минуту 😊', from: 'out' },
+        { text: 'Катя вы лучшее что случилось с моим гардеробом 😭❤️', from: 'in', gold: true },
+      ]
+    },
+    {
+      name: 'Марина',
+      initial: 'М',
+      badge: '🔥 Восторг',
+      messages: [
+        { text: 'Получила посылку!!! Всё идеально упаковано, чек вложен', from: 'in' },
+        { text: 'Как она вам? 😍', from: 'out' },
+        { text: 'Я в слезах от счастья. Это моя мечта из wishlist-а 2 года', from: 'in' },
+        { text: 'Вот за это и люблю свою работу 💛 носите на здоровье!', from: 'out', gold: true },
+        { text: 'Уже заказываю следующую 😅 спасибо огромное!', from: 'in' },
+      ]
+    },
+    {
+      name: 'Дмитрий',
+      initial: 'Д',
+      badge: '🎁 Подарок',
+      messages: [
+        { text: 'Здравствуйте, хочу сделать подарок жене. Она мечтает о кольце Bvlgari', from: 'in' },
+        { text: 'Отличный выбор! Есть в наличии, могу выкупить на этой неделе', from: 'out' },
+        { text: 'А сертификат подлинности будет?', from: 'in' },
+        { text: 'Конечно, всё официально — бутик, чек, коробка, пакет 🛍️', from: 'out' },
+        { text: 'Супруга в восторге! Сказала — лучший подарок за 10 лет 🥂', from: 'in', gold: true },
+      ]
+    },
+    {
+      name: 'Юлия',
+      initial: 'Ю',
+      badge: '✅ Оригинал',
+      messages: [
+        { text: 'Катя, прилетела сумка! Такая красивая вживую...', from: 'in' },
+        { text: 'Покажите как доехала! 📸', from: 'out' },
+        { text: 'Вот, смотрите — коробка целая, всё как из бутика', from: 'in' },
+        { text: 'Отлично! Это она и есть — Bottega Veneta из Милана 🤍', from: 'out', gold: true },
+        { text: 'Рекомендую всем подругам ваш сервис! Честно и удобно', from: 'in' },
+      ]
+    },
+    {
+      name: 'Светлана',
+      initial: 'С',
+      badge: '💫 Wow',
+      messages: [
+        { text: 'Доброе утро ☀️ Хочу туфли Valentino, видела у вас в историях', from: 'in' },
+        { text: 'Привет! Да, беру на следующий полёт. Размер?', from: 'out' },
+        { text: '38, но у меня немного широкая стопа...', from: 'in' },
+        { text: 'Замерю в бутике и напишу до покупки — не волнуйтесь 🙏', from: 'out' },
+        { text: 'Сели идеально!!! Вы такая внимательная, это редкость 💛', from: 'in', gold: true },
+      ]
+    },
+    {
+      name: 'Елена',
+      initial: 'Е',
+      badge: '👑 Люкс',
+      messages: [
+        { text: 'Смотрела кучу байеров — выбрала вас. Хочу YSL клатч', from: 'in' },
+        { text: 'Спасибо за доверие! Уточню наличие в Париже и отпишу', from: 'out' },
+        { text: 'Есть! Выкупаю?', from: 'out' },
+        { text: 'Да!! Давайте! Реквизиты скиньте', from: 'in' },
+        { text: 'Катя, это просто мечта. Счастливая жена это самое главное ❤️', from: 'in', gold: true },
+      ]
+    },
+    {
+      name: 'Ольга',
+      initial: 'О',
+      badge: '🛍️ Smart',
+      messages: [
+        { text: 'Сравнивала — в бутике Москва 180 000₽, у вас вышло 143 000₽', from: 'in' },
+        { text: 'Да, экономия на курсе + нет наценки российского рынка 💡', from: 'out' },
+        { text: 'Когда следующая закупка в Милане?', from: 'in' },
+        { text: 'Уже 15-го! Запишитесь, беру предзаказы до 12-го', from: 'out', gold: true },
+        { text: 'Записалась! И ещё одну подругу привела 😄', from: 'in' },
+      ]
+    },
+    {
+      name: 'Татьяна',
+      initial: 'Т',
+      badge: '🤍 Доверие',
+      messages: [
+        { text: 'Катя, всё получила! Отчёт как и обещали, с фото из бутика', from: 'in' },
+        { text: 'Как всегда — всё прозрачно 😊 понравилось?', from: 'out' },
+        { text: 'Это уже 4-я покупка у вас. Уже не представляю другой шоппинг', from: 'in', gold: true },
+        { text: 'Очень рада что доверяете! Это моя главная мотивация 🧡', from: 'out' },
+        { text: 'Когда следующий полёт? Уже мониторю wishlist 😅', from: 'in' },
+      ]
+    }
+  ];
+
+  const stack = document.getElementById('reviewsStack');
+  const counterNum = document.getElementById('reviewsCounterNum');
+  const counterTotal = document.getElementById('reviewsCounterTotal');
+  const prevBtn = document.getElementById('reviewsPrev');
+  const nextBtn = document.getElementById('reviewsNext');
+  if (!stack) return;
+
+  counterTotal.textContent = reviews.length;
+  let current = 0;
+  let isAnimating = false;
+
+  function buildCard(reviewIndex) {
+    const r = reviews[reviewIndex % reviews.length];
+    const card = document.createElement('div');
+    card.className = 'review-card';
+    card.dataset.index = reviewIndex;
+
+    // Badge
+    const badge = document.createElement('div');
+    badge.className = 'review-badge';
+    badge.textContent = r.badge;
+    card.appendChild(badge);
+
+    // Phone mockup
+    const phone = document.createElement('div');
+    phone.className = 'review-phone';
+
+    // Header
+    const header = document.createElement('div');
+    header.className = 'review-phone-header';
+    header.innerHTML = `
+      <div class="review-phone-avatar">${r.initial}</div>
+      <div>
+        <div class="review-phone-name">${r.name}</div>
+        <div class="review-phone-status">был(а) недавно</div>
+      </div>
+      <div class="review-phone-back">‹ Aurum</div>
+    `;
+    phone.appendChild(header);
+
+    // Messages
+    const msgs = document.createElement('div');
+    msgs.className = 'review-phone-messages';
+    r.messages.forEach((m, i) => {
+      const msg = document.createElement('div');
+      msg.className = 'review-msg ' + (m.from === 'out' ? 'outgoing' : 'incoming') + (m.gold ? ' gold' : '');
+      const hours = 14 + Math.floor(i * 0.7);
+      const mins = String(Math.floor(Math.random() * 55 + 3)).padStart(2, '0');
+      msg.innerHTML = `${m.text}<div class="review-msg-time">${hours}:${mins}</div>`;
+      msgs.appendChild(msg);
+    });
+    phone.appendChild(msgs);
+
+    // Bottom bar
+    const bar = document.createElement('div');
+    bar.className = 'review-phone-bar';
+    bar.innerHTML = '<div class="review-phone-bar-line"></div>';
+    phone.appendChild(bar);
+
+    card.appendChild(phone);
+
+    // Click to advance
+    card.addEventListener('click', () => { if (!isAnimating) advance(); });
+
+    // Drag/swipe
+    let startX = 0, isDragging = false;
+    card.addEventListener('pointerdown', e => {
+      if (card.dataset.pos !== '0') return;
+      startX = e.clientX; isDragging = true;
+      card.setPointerCapture(e.pointerId);
+    });
+    card.addEventListener('pointermove', e => {
+      if (!isDragging || card.dataset.pos !== '0') return;
+      const dx = e.clientX - startX;
+      const rot = dx * 0.08;
+      card.style.transition = 'none';
+      card.style.transform = `rotate(${rot}deg) translate(${dx}px, ${Math.abs(dx) * 0.1}px)`;
+      card.style.opacity = String(1 - Math.abs(dx) / 400);
+    });
+    card.addEventListener('pointerup', e => {
+      if (!isDragging) return;
+      isDragging = false;
+      card.style.transition = '';
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 80) {
+        advance(dx < 0 ? 'left' : 'right');
+      } else {
+        card.style.transform = '';
+        card.style.opacity = '';
+      }
+    });
+
+    return card;
+  }
+
+  function renderStack() {
+    stack.innerHTML = '';
+    const total = reviews.length;
+    // Show up to 5 cards
+    const visible = Math.min(5, total);
+    for (let i = visible - 1; i >= 0; i--) {
+      const idx = (current + i) % total;
+      const card = buildCard(idx);
+      card.dataset.pos = String(i);
+      if (i > 4) { card.dataset.pos = '5'; }
+      stack.appendChild(card);
+    }
+    counterNum.textContent = String(current + 1);
+  }
+
+  function advance(dir = 'left') {
+    if (isAnimating) return;
+    isAnimating = true;
+
+    const topCard = stack.querySelector('[data-pos="0"]');
+    if (!topCard) { isAnimating = false; return; }
+
+    // Fly out top card
+    if (dir === 'left') {
+      topCard.style.transform = 'rotate(-18deg) translate(-420px, -60px)';
+      topCard.style.opacity = '0';
+    } else {
+      topCard.style.transform = 'rotate(18deg) translate(420px, -60px)';
+      topCard.style.opacity = '0';
+    }
+    topCard.style.transition = 'transform 0.42s cubic-bezier(0.55,0,1,0.45), opacity 0.32s ease';
+
+    // Shift remaining cards forward
+    const cards = stack.querySelectorAll('.review-card');
+    cards.forEach(c => {
+      const pos = parseInt(c.dataset.pos);
+      if (pos > 0) {
+        c.dataset.pos = String(pos - 1);
+      }
+    });
+
+    // After fly-out: remove top, add new at back, update counter
+    setTimeout(() => {
+      topCard.remove();
+      current = (current + (dir === 'left' ? 1 : reviews.length - 1)) % reviews.length;
+
+      // Add a new card at position 4 (back of visible stack)
+      const newIdx = (current + 4) % reviews.length;
+      const newCard = buildCard(newIdx);
+      newCard.dataset.pos = '5';
+      newCard.style.transform = 'rotate(12deg) translate(66px, 44px)';
+      newCard.style.opacity = '0';
+      newCard.style.transition = 'none';
+      stack.insertBefore(newCard, stack.firstChild);
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          newCard.dataset.pos = '4';
+          newCard.style.transform = '';
+          newCard.style.opacity = '';
+          newCard.style.transition = 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1), opacity 0.4s ease';
+        });
+      });
+
+      counterNum.textContent = String(current + 1);
+      setTimeout(() => { isAnimating = false; }, 200);
+    }, 400);
+  }
+
+  function retreat() {
+    current = (current + reviews.length - 1) % reviews.length;
+    renderStack();
+  }
+
+  nextBtn.addEventListener('click', () => { if (!isAnimating) advance('left'); });
+  prevBtn.addEventListener('click', () => { if (!isAnimating) retreat(); });
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    const section = document.getElementById('reviews');
+    if (!section) return;
+    const rect = section.getBoundingClientRect();
+    if (rect.top > window.innerHeight || rect.bottom < 0) return;
+    if (e.key === 'ArrowRight') advance('left');
+    if (e.key === 'ArrowLeft') retreat();
+  });
+
+  renderStack();
+})();
+</script>
+</body>
+</html>
