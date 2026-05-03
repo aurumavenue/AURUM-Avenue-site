@@ -963,6 +963,45 @@
     .nav-cta { display: none; }
   }
 
+
+  /* Скрываем детализацию калькулятора */
+  #calcResult .calc-result-col:not(.calc-result-total-col),
+  #calcResult .calc-result-plus,
+  #calcResult .calc-result-eq,
+  #calcResult .calc-rate-note {
+    display: none !important;
+  }
+  #calcResult .calc-result-inner {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  #calcResult .calc-result-total-col {
+    text-align: center;
+  }
+  #calcResult .calc-result-label {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  #calcResult .calc-result-total {
+    font-size: 52px;
+  }
+  #calcResult::before {
+    content: "Итоговая стоимость с учётом сервисного сбора и доставки до Москвы";
+    display: block;
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
 </style>
 </head>
 <body>
@@ -1208,7 +1247,7 @@
         </div>
         <div class="calc-rule-item">
           <span class="calc-rule-dot"></span>
-          <span>500€ – 10 000€ — сервисный сбор включён</span>
+          <span>500€ – 10 000€ — стоимость рассчитывается индивидуально</span>
         </div>
         <div class="calc-rule-item">
           <span class="calc-rule-dot"></span>
