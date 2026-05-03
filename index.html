@@ -942,6 +942,26 @@
     .calc-cat:first-child { border-right: none; border-bottom: 1px solid var(--border); }
     .calc-result { padding: 20px 18px; }
   }
+
+  /* Бургер меню */
+  .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; z-index: 1001; }
+  .burger span { display: block; width: 24px; height: 2px; background: var(--brown); transition: all 0.3s ease; transform-origin: center; }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--cream); z-index: 999; padding: 100px 32px 40px; flex-direction: column; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .mobile-menu-link { font-family: "Manrope", sans-serif; font-size: 28px; font-weight: 300; letter-spacing: 0.05em; color: var(--brown); text-decoration: none; text-transform: uppercase; padding: 12px 0; border-bottom: 1px solid rgba(47,33,26,0.1); display: block; }
+  .mobile-menu-link:hover { color: var(--gold); }
+  .mobile-menu-cta { display: inline-block; margin-top: 32px; background: var(--brown); color: var(--cream); font-family: "Manrope", sans-serif; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; padding: 16px 40px; text-decoration: none; }
+
+  @media (max-width: 900px) {
+    .burger { display: flex; }
+    .nav-cta { display: none; }
+  }
+
 </style>
 </head>
 <body>
@@ -958,7 +978,20 @@
     <li><a href="#contact">Контакты</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Написать</a>
+  <button class="burger" id="burgerBtn" aria-label="Меню"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#services" class="mobile-menu-link">Услуги</a></li>
+    <li><a href="#how" class="mobile-menu-link">Как работает</a></li>
+    <li><a href="#catalog" class="mobile-menu-link">Каталог</a></li>
+    <li><a href="#about" class="mobile-menu-link">О сервисе</a></li>
+    <li><a href="#reviews" class="mobile-menu-link">Отзывы</a></li>
+    <li><a href="#calculator" class="mobile-menu-link">Расчёт</a></li>
+    <li><a href="#contact" class="mobile-menu-link">Контакты</a></li>
+    <li><a href="#contact" class="mobile-menu-cta">Написать</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1355,6 +1388,23 @@ window.addEventListener('scroll', () => {
   nav.style.padding = window.scrollY > 50 ? '14px 60px' : '22px 60px';
   nav.style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(47,33,26,0.07)' : 'none';
 });
+
+  // Бургер меню
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burgerBtn.addEventListener('click', () => {
+    burgerBtn.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mobile-menu-link, .mobile-menu-cta').forEach(link => {
+    link.addEventListener('click', () => {
+      burgerBtn.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
 </script>
 <script>
 // ===== CALCULATOR =====
